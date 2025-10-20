@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>모닝커피</h1>
+    <form action="#">
+        <label for="name">지점명:</label>
+        <input type="text"id="name" value="천안역점">
+        <p>
+            <label for="selectCF">메뉴선택:</label>
+            <select id="selectCF">
+                <option value="1">아메리카노</option>
+                <option value="2">카페라때</option>
+            </select>
+            </p>
+            <fieldset>
+                <legend>사이즈 선택</legend>
+                <label>
+                    <input type="radio"name="cfsize">Tall</label>
+                <label >    <input type="radio"name="cfsize">Grande</label>
+            </fieldset>
+            <fieldset>
+                <legend>옵션 선택</legend>
+                <input type="checkbox"><label >삿추가</label>
+                <input type="checkbox"><label >크림추가</label>
+                <input type="checkbox"><label >포장</label>
+            </fieldset>
+            <p><label>배송시간요청사항</label></p>
+            <input type="submit"value="주문완료">
+    </form>
+</body>
+</html>
