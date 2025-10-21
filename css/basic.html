@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--css는 세가지 적용방법이 있다. 내부,외부(파일형식이 다른 경로로 연결이
+    필요하다.),인라인(코드안에 넣는다)  -->
+    <!-- 내부 스타일 시트 방식 -->
+    <!-- <style> -->
+<!-- /* head 태그 내부, style 태그 내부
+ /* css 코드 작성 영역*/ -->
+    <!-- </style> -->
+    <style> 
+/* 대상을 선택하고 어떻한 선언을 하겠다. 내부스타일 */
+    h1 {
+       color : red;
+     }
+    h3 {
+        color: purple   ;
+    }
+     </style>
+     <h1>css Basic</h1>
+     <h2>h2h2h2h2</h2>
+     <h3>h3h3h3h3h3</h3>S
+     <h4>h4h4h4h4h4h4h</h4>
+     <!-- 외부에 있는 파일 적용
+      외부 스타일 시트 방식은 link를 지정하면 시트에 적용된다. 그럼 이게 순서로 적용
+      외부 css파일도 저장하고 파일 경로를 지정하여 "./파일경로" 연결 -->
+      <link rel="stylesheet" href="./basic.css">
+<!-- 인라인 스타일 적용 방식
+ 강제로 적용하는 경우에만 사용 
+ 인라인과 내부에서 같이 사용하면 인라인을 선택함 -->
+  <h2 style= "color: green">    
+     h2h2h2h2</h2>
+     <!-- 인라인 스타일 >>> vs 내부 스타일 방식 -->
+          <h1 style="color: aquamarine;">css Basic</h1>
+          <!-- 내부vs 외부 
+            마지막 순서에 적용된 외부 링크로 내부스타일과 순서를 적용하며  -->
+           <!-- 내부와 외부스타일 중 시트적용은 가장 마지막 순서에 적용한다 -->
+           <!-- 적용순서 -->
+            <!-- 앞으로 선택자 종류, 어떻게 선언하는지 배운다. -->
+</body>
+</html>
