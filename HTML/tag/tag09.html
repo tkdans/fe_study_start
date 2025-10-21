@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 오디오랑 비디오 같은 미디어 표시하기 -->
+     <audio src="../../media/5second.mp3" controls ></audio>
+     <video src="../../media/5second.mp4" controls></video>
+
+     <!-- * 영상배령 사이트를 이용해서 배경에서 영상이 재갱되는 미디어를 활용할 수 있다.
+      DBCUT등 뒤쪽에 비디오를 깦고 배경을 차지하는 것, 자동 재생된다. 재생은 제약이 있다.
+        -->
+      <!-- 자동재생 및 음소거 그리고 반복 autoplay muted loop-->
+           <video src="../../media/5second.mp4" autoplay muted loop ></video>
+    <!--브라우저에서는 갑작스런 소리에 사용자가 놀란 수 있어서 음소거로 올려야 한다. muted  -->
+    <!-- 토막지식! 유튜브에서 소리가 나는 경우 접근 성향에 따라서 사이트 경로가 확실한 경우
+     브라우저가 muted 제한을 풀어놓은 경우이다. -->
+<!-- source코드상에서 설명을 하는 경우  재생이 안되는 경우를 방지하기 위해서 여러 경로를 지정할 수 있다. 
+ 웹 브라우저 별로 재생이 안되는 경우가 있기 땨문이다. -->
+    <audio src="../../media/5second.mp3" controls >
+        <source src="../../media/5second.mp3" type="audio/mpag"> 
+        <source src="../../media/5second.way" type="audio/way">
+        <source src="../../media/5second.ogg" type="audio/ogg">
+    </audio>
+    <video src="../../media/5second.mp4"type="video/mp4">
+    <video src="../../media/5second.avif"type="video/avif">
+    <video src="../../media/5second.mpeg"type="video/mpeg"></video>
+</video>
+    </video>
+      <!-- 유튜브의 영상을 연결하고 싶다.싶으면 사이트에다가 선택> 우측버튼> 소스코드복사> 넣고 싶은 사이트에
+     붙여놓으면 된다. -->
+    <iframe width="783" height="440" src="https://www.youtube.com/embed/PMBa2F44jxU" title="Relaxation 4K - Scenic Jeju Island, an south of Korea 제주도여행 제주도 풍경" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- 보고싶은 영상을 주소를 복사에서 붙여놓으면 재생이 안된다.이 경우는 결로에 식별자를 가지고 유튜브가 열러줘서 볼 수 있다.  -->
+    <!--영상을 추가하는 방법은 각자 다 다르다. 찾아봐야 할께 많다. 역량 내가 얼마나 중요하고 새로운 것을 적용하기로 한다면 자료를 찾아서 적용해 보
+    는 능력이 중요하다. 경험이 많아진다는 것은 방향성에 맞게 찾아서 적용하는 시간이 짧아진다. 필요한 부분 불필요한부분 구분 적용을 어떻게 하느냐, 
+    검색을 빠르게 하던지, 모르는 것이지만 자료와 정보를 정리를 잘 해놔야 해결하는데 큰 도움이 된다. 하던거는 되겠지라는 마인드가 필요함
+    성취감을 느껴야 해결하는 재미가 느껴진다. 스트레스 내성, 내용을 정리하는 습관이 어떤상황, 어떤 문제, 어떤 원인, 해결방식, 문제 내용을 정리
+    하는 것이 된다. 사고방향이나 문제해결 능력을 키워야 한다. 언제 상황에 따라 문제원인, 문제해결 방식을 쉽게 찾을수 있다.   -->
+</body>
+</html>
