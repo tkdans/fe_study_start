@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 기본 선택자 사용하기 -->
+<style>
+* {/* css*/}
+* {color: gray}
+/*태그 선택자*/
+h2 {
+    color: blue;
+}
+/*우선순위로 *와 h2의 순위는 h2가 높아 적용된다(대상을 명시하는 경우).*/
+/* 아이디 선택자* 속성값 앞에 #을 붙여 사용/
+/*아이디 선택자는 중복되지 않게 하나만 주어져야만 한다.*/
+/* 아이디 선택자 중복이 되지 않아야 한다.*/
+/*우선순위가 높다*/
+#select-id {color: green; }
+/*클래스 선택자*/
+/*클래스 속성값은 중복해서 사용할 수 있고 여러곳에서 사용할 수 있다.*/
+.select-class{color: orange ;}
+/*속성 선택자*/
+[hiref] {color: black;}
+[target="_blank"]{color: red;}
+
+</style>
+</head>
+
+<body>
+    <!-- 뭘 선택할꺼냐? -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3 id="select-id">h3</h3>
+    <h4 class="select-class">h4</h4>
+    <h5>h5</h5>
+
+    <p>p 하나</p>
+    <p class="select-class">p 둘</p>
+    <p>p 셋</p>
+    <p>p 넷</p>
+
+    <a href="https://www.naver.com" target="_blank">네이버로 이동</a>
+    <a href="https://www.google.com" target="_self">구글로 이동</a>
+
+</body>
+</html>
