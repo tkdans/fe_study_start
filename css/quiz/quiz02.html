@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
+    /* 클래스에 id를 부여하여 사용하는 것이 좋다. 원하는 대상에만 직접 id를 부여해서 사용  */
+    /* 태그 속에 클래스 사용하여 여럿개를 대상을 할 수 있어 좋다.  */
+    /* id는 진짜 특수한 상항에서만 사용! */
+    /* styl에서 먼저 class의 속성이름을 쓰고 복사해서 HTMK문서에 붙여 놓고 쓴다 */
     .orange{
         color: orange;
     }
@@ -13,7 +17,8 @@
     .blue{
         color: blue;
     }
-/* 개별적으로 태그별로 설정을 준 것 */
+/* 개별적으로 태그별로 설정해 줄 수도 있지만 이 이후에 작성되는 문자에 적용되기 때문에
+불편하다. */
     /* p { 
         color: blue;
     }*/
@@ -23,7 +28,7 @@
     /*h1 {
         color: orange;
     }*/
-    
+
 
 
 </style>
@@ -38,10 +43,8 @@
    <p><span class="blue"> 아름다운 여름꽃과 시원한 바다를 ....</span></p>
     <!-- ul태그 li태그로 맞추어 준다. -->
     <ul>
-        <li>
-            일시 :  <span class="blue">6월 15일 부터 8월 15일까지</span></li>
-            
-            <li>장소 : 봄빛 수목원 일원</li>
+        <li>일시 :  <span class="blue">6월 15일 부터 8월 15일까지</span></li>
+        <li>장소 : 봄빛 수목원 일원</li>
         
     </ul>
 </body>
