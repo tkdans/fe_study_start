@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 글골 
+     다운로드 하지 말고 getembed에서 head코드와 style코드를 복사해서 붙여서 사용한다.
+     위 두줄을 필수적인 주쇼-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 외부글꼴 삭제하고 다른 글꼴을 붙여 넣어도 된다 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Stylish&display=swap" rel="stylesheet">
+
+    <style>
+        /* 외부 글꼴은 가져다 쓸 때도 조건에 따라 제한된다. */
+        .font-attr1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 100px;
+            font-variant: small-caps;
+            letter-spacing: 10px;
+            line-height: 70px;
+        }
+
+        .font-attr2 {
+            /* 700 bold */
+            font-weight: 700;
+            font-style: italic;
+            /* italic 이태리체*/
+            /* obiqye 기울기 */
+        }
+
+        .font_box {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* 속성이 자식들에게 상속이 된다. */
+        .inbox1 {
+            font-size: 2em;
+            /* 부모요소(font-box)의 크기 대비 2배 */
+        }
+
+        .inbox2 {
+            font-size: 2rem;
+            /* rem 상대크기 */
+            /* html 크기 대비 */
+            /* html 기본 텍스트 크기 16px */
+        }
+
+        /* 외부글꼴 적용할 때 쓴 스타일 */
+        .stylish-regular {
+            font-family: "Stylish", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .nanum-pen-script-regular {
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <p>기본텍스트</p>
+    <p class="font-attr1">font-attr1</p>
+    <p class="font-attr2">font-attr2 글씨속성</p>
+    <br>
+    <p>오늘의 특가
+        <del>5,000원</del><ins>3000원</ins>
+    <p>오늘의 특가
+        <span style="text-decoration: line-through;">5,000원</span><span style="text-decoration: underline;">3000원</span>
+
+    </p>
+    <div class="font_box">
+        <!-- 외부글꼴 사용하는방업 class의 외부글꼴을 복사해서 사용하고자 하는 <p class="외부글꼴"> -->
+        <p class='nanum-pen-script-regular'>font box 글자1</p>
+        <!-- 상대적인 크기 -->
+        <p class="inbox1">font box 글자22</p>
+        <p class="inbox2">font box 글자333</p>
+
+    </div>
+    <!-- class는 여러개를 설정할 수 있는데 하나의 태그에 띄어쓰기로 여러개의 효과를 쓸 수 있다. -->
+    <div class="font_box2 nanum-pen-script-regular">
+        <p>font box 글자1</p>
+        <p class="inbox1">font box 글자22</p>
+        <p class="inbox2">font box 글자333</p>
+
+    </div>
+
+    <div class='nanum-pen-script-regular'>
+        <p>asdfaosdif</p>
+        <p>글자글자asdjifo</p>
+    </div>
+</body>
+
+</html>
