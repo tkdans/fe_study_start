@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        /*margin,padding을 기본값을 0으로 세팅할 수 있다.*/
+        /* *은 이페이지애 적용*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         .box1{
             /*외부여백, 4가지 방향으로 적용*/
             margin: 30px;
@@ -30,7 +38,7 @@
             padding-top: 3rem;
             width: 200px;
             height: 150px;
-/*box-sizeing 다른 속성에 영향을 많이 받는다.사이즈 지정이 어렵다.*/
+/*box-sizeing 다른 속성에 영향을 많이 받는다.사이즈 지정이 어렵다.보더 박스일 경우 자동 조정해준다.*/
 box-sizing: border-box;
         }
     </style>
