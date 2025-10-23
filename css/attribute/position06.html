@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* 기본세팅 값 */
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.container{
+    /*  */
+    width: 200px;
+    background-color: lightgrey;
+    position: relative;
+
+}
+
+.menu{
+    
+    height: 50px;
+    text-align: center;
+}
+
+.submenu{
+    background-color: aquamarine;
+    position: absolute;
+    top:50px;
+    left: 0;
+    width: 100%; /*container가 부모요소라서 부모요소 크기 대비 상대 %로 기입.*/
+    /*ctrl + / */
+    display: none;
+}
+.item{
+    height: 50px;
+}
+/* menu애 submenu를 보이게 하겠다. */
+/* .menu:hover~.submenu{ */
+    /* ~형제파일을 선택 */
+    /* display: block; */
+/* } */
+/* 부모인 마우스를 올렸을때 보이게 하겠다 여백*/
+.container:hover .submenu{
+    display: block;
+}
+.item:hover {
+    background-color: burlywood;
+    text-decoration: underline;
+    cursor: pointer;/*마우스 커서가 손가락으로 변화한다.*/
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="menu">Menu</div>
+        <div class="submenu">
+            <div class="item">submenu item1</div>
+            <div class="item">submenu item2</div>
+            <div class="item">submenu item3</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본세팅 값 */
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 사진으로 배경을 삼고 글씨를 넣는법 */
+        /* 사진을 웹사이트에 올리고 경로를 지정하여 사용 */
+.containe {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.content {
+    /* 배경 part */
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}
+/* 원래 부모에 따라간다. */
+.cloud-filter {
+    /*글씨 part  */
+     width: 400px;
+    height: 400px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;  /*투명도 설정*/
+}
+/* 앞뒤로 겹쳐있다. 부모요소에 있다.  */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content"></div>
+        <div class="cloud-filter"></div>
+    </div>
+
+</body>
+</html>
