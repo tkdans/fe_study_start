@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+/* position 속성: 위치 지정 (배치)
+static : 기본적인 흐름 (기본값)
+relatvie : 흐름대로+ 위치 조정 가능 
+(위치 기준 : 원개 자기사 있어야하는 기능)
+위치를 조엉하고 싶다. relative:*/
+  /* absolute : 흐름무시+ 위치 조정 가능
+        무시하면서 위치교정이 가능한 부모요소의 시작지점 기준 
+        부모요소 static: 위치조정 x
+        부모요소 relative: 위치조정 o
+        */
+        /* relatvie */
+        .red-box {
+            background-color: red;
+            position: relative;
+            left: 100px;
+        }
+
+        .green-box {
+            background-color: green;
+            left: 100px;
+            top: 30px;
+            /* 기본값 static인 경우, 위치 지정이 안된다. */
+            position: relative;
+        }
+
+        .blue-box {
+            background-color: blue;
+            position: relative;
+            left: -100px;
+            /* +값은 밑으로 이동 -값은 올라간다. */
+            top: -20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+
+</body>
+</html>

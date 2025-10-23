@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{height: 4000px;}
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        
+        .red-box {
+            background-color: red;
+        }
+/* 웹창 스크롤로 조정해도 무조건 고정된다. 보조메뉴나 바로가기 버튼으로 사용한다.
+링크, 자바 스크랩으로 연결이 가능하다. */
+        .green-box {
+            background-color: green;
+            position: fixed;
+            top: 200px;
+            left: 250px;
+
+        }
+
+        .blue-box {
+            background-color: blue;
+        }
+        .top-box{
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+        }
+        .navbar{
+            height: 100px;
+            background-color: lightblue;
+            position: sticky;
+            top: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+<div class="top-box">아반떼</div>
+
+<div class="navbar"></div>
+</body>
+</html>

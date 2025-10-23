@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* absolute : 흐름무시+ 위치 조정 가능
+        무시하면서 위치교정이 가능한 부모요소의 시작지점 기준 
+        부모요소 static: 위치조정 x
+        부모요소 relative: 위치조정 o
+        */
+        /* 부모요소 대비 시작요소 */
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* 빨강색을 제일 앞으로 나오게 하려면 z-index */
+        .red-box {
+            background-color: red;
+            position: relative;
+            left: 50px;
+            z-index: 100;
+
+        }
+
+        .green-box {
+            /* 흐름에서 벗어나면 제외하고 위치한다.  */
+            background-color: green;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 50;
+        }
+
+        .blue-box {
+            background-color: blue;
+             position: relative;
+        }
+        /* static relative absloute */
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+
+</body>
+</html>
