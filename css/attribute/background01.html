@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .box {background-color: blue; }
+        /* <!-- 동일한 class에 여러개의 속성을 줄 수 있다.
+             --> */
+        .back-img{
+            background-image: url(../../HTML/bal.png);
+            background-repeat:no-repeat;
+            /* background-size: contain; */
+            background-position: left bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="box back"></div>
+    <!-- 동일한 class에 여러개의 속성을 줄 수 있다. 
+     밑-->
+    <div class="box back-img"></div>
+</body>
+</html>
