@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*text요소를 가운데 정렬 및 내부컨텐츠(box)안에서 가운데 정렬 하는 방법
+        가운데 정렬(block, inline요소)
+        자기자신에게 거는 경우 block, 부모한테 거는 경우 inline
+        1. margin: 0 auto; (좌우 margin 자동)
+            inline 요소 대상 : 작동x
+            block 요소 대상 : block 자기자신 요소가 가운데 정렬
+        2. text-align: center;
+            inline 요소 대상 : 작동x
+            block 요소 대상 : 내부 컨텐츠(박스안에서 이동) 요소 가운데 정렬
+            block 요소 가운데 정렬 ---> 자기자신 margin : 0 auto
+            inline 요소 가운데 정렬 ---> 자기부모 block 요소에 text-align: center
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .p1{text-align:center}
+        /*p1 블록요소 */
+        .span{text-align: center;}
+        /*span 인라인요소 inline요소 */
+.out-box{
+    width: 400px;
+    border: 1px solid black;
+    margin: 0 auto; 
+    /* 불록 자기자신이 가운데 정렬 
+    사이즈를 주어져야 정렬이 된다. width가 있는 상태에서 width안에서 조정 */
+    text-align: center;
+    /* 상속이 되는 속성을 가지고 있다. */
+}
+.inner-box{
+    width: 250px;
+    border: 1px solid red;
+    margin: 0 auto;
+    /*inner-box가 가운데 정령 auto는 좌우가 오토 */
+    text-align: center;
+    /* 내부에 있는 것을 가운데로 보겠다. */
+}
+.inner-box span{
+    /*적용이 안된다. 부모한테 적용해야 한다.*/
+    /* text-align: center; */
+    /* margin: 0 auto; */
+}
+    </style>
+</head>
+
+<body>
+<p class="p1">p1 p1</p>
+<span class="span">span1span1</span>
+</body>
+<div class="out-box">
+        <!-- <p style="text-align: center;">p tag outbox</p> -->
+        <p>p tag outbox</p>
+        <span>span tag outbox</span>
+
+        <div class="inner-box">
+            <h2>h2 tag inner box</h2>
+            <!--h2는 블록요소로 직접입력 <태그 stye+"text-align: center"> -->
+            <span>span tag inner box</span>
+            <br>
+            <input type="button" value="버튼">
+        </div>
+        
+    </div>
+</html>
