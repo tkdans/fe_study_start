@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 500px;
+            /* 자식사이즈 만큼 자동으로 차지한다. */
+            margin: 0 auto;
+            margin-top: 50px;
+
+        }
+        /*인라인 블럭 방식*/
+        /*.red-box{
+            width: 250px;
+            height: 100px;
+            background-color: red;
+            display: inline-block; 
+            /* 둘 사이에 스페이스가 있어서 사이즈가 넘어간다. 공백을 없애야 한다. */
+       /* }
+        .green-box{
+            width: 250px;
+            height: 100px;
+            background-color: green;
+            display: inline-block;
+        }
+        */
+        .red-box{
+            width: 250px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+        .green-box{
+            width: 250px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        .main{
+            text-align: center;
+            
+            }
+        .blue-box{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+        /*float 사용시 마지막에는 무조건 clear*/
+        .container::after{
+            counter:"" ;
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="red-box">
+        </div><div class="green-box"></div>
+        <div class="main">
+            <p>글자가운데정렬</p>
+        </div>
+        <div class="blue-box"></div>
+    </div>
+</body>
+
+</html>
