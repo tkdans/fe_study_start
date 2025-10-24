@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 20px;
+            transition-property: width all;/* transition 변화하는 것,속성을 여럿 효과를 줄 수 있다.*/
+            transition-duration: 3s ; /*3초 나타나는 시간*/
+            /* transition-delay: 3s; */
+            /* transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        } */
+        /*
+        기존 클래스 : 
+            transition-property, 
+                기존 클래스 : 마우스 올릴 때 o, 내릴 때 o
+                hover 클래스 : 마우스 올릴 때 O, 내릴 떼 X
+            transition-duration: 
+        */
+        /* .box:hover{ */
+            /* width: 300px; */
+            /* background-color: blue; */
+            /* width: 100px; */
+            /* height: 100px; */
+            /* background-color: red; */
+            /* transition-property: width all;transition 변화하는 것,속성을 여럿 효과를 줄 수 있다. */
+            /* transition-duration: 3s ;  */
+        }
+        .container:hover .box{
+            width: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="container">
+        <div class="box" style="transition-timing-function: linear;"></div>
+        <div class="box" style="transition-timing-function: ease;"></div>
+        <div class="box" style="transition-timing-function: ease-in;"></div>
+        <div class="box" style="transition-timing-function: ease-out;"></div>
+        <div class="box" style="transition-timing-function: ease-in-out;"></div>
+    </div>
+</body>
+</html>
