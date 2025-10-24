@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 600px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+
+        }
+
+        .in {
+            width: 300px;
+            border: 1px solid black;
+            float: left;
+        }
+
+/*         .box1 {
+            float: left;
+        }
+
+        .box2 {
+            float: left;
+        } */
+
+        img {
+            width: 150px;
+            float: left;
+        }
+
+        .container::after {
+            content: "";
+            /*content가 없으면 작동을 안해서 필수로 입력*/
+            display: block;
+            /*content 기본 텍스트 inline->block 변경*/
+            clear: both;
+            /*float자리에 clear처리*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="in box1">
+            <img src="../../HTML/tag/img/ocean.jpg">
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita est necessitatibus vero tenetur,
+                eius ullam excepturi libero dolores autem, iste, enim recusandae eum impedit eligendi quod. Modi omnis
+                quidem architecto.</span>
+        </div><div class="in box2">
+            <img src="../../HTML/tag/img/ocean.jpg">
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita est necessitatibus vero tenetur,
+                eius ullam excepturi libero dolores autem, iste, enim recusandae eum impedit eligendi quod. Modi omnis
+                quidem architecto.</span>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
