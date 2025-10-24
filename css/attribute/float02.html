@@ -33,17 +33,17 @@ float: left;
 .blue-box{background-color: blue;
 float: left;
 }
-.next{background-color: gray;
+.box-next{background-color: gray;
 
 }
 .clear-box{
     clear: both;
-}
-.container::after{
+} 
+/* .container::after{
     content: ""; /*content가 없으면 작동을 안해서 필수로 입력*/
     display: block;/*content 기본 텍스트 inline->block 변경*/
     clear: both; /*float자리에 clear처리*/
-}
+} */
 /*float로 공중에 뜬 상태로 공간/위치 인식이 안될때 해려방법
 1.그 크기만큼 차지하는공간에 임의에 요소를 배치한다.
 2.clear라는 요소를 사용
@@ -73,10 +73,11 @@ float: left;
         <div class="box green-box"></div>
         <div class="box blue-box"></div>
           <div class="clear-box"></div>
+           <!-- clear 태그는 float의 맨 밑 문장아래에 존재해야한다. -->
         <!-- <div class="clear-box"></div> -->
     </div>
     <!-- <div class="clear-box"></div> -->
 <!-- <div class="box"></div> -->
-    <div class="box-next" ></div>
+    <div class="box box-next" ></div>
 </body>
 </html>

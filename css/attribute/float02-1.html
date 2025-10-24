@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /*외부여백 0*/
+            padding: 0;
+            /*내부여백 0*/
+            box-sizing: border-box;
+            /*박스모델에 사이즈를 지정하면 border까지 사이즈 자동 설정*/
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .black-box {
+            /*  */
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .red-box {
+            background-color: red;
+            float: left;
+        }
+
+        .green-box {
+            background-color: green;
+            float: left;
+        }
+
+        .blue-box {
+            background-color: blue;
+            float: left;
+        }
+
+        .box-next{
+            background-color: gray;
+        }
+        .clear-box{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box black-box">
+
+    </div>
+    <div class="box black-box">
+    </div>
+    <div class="box black-box"> </div>
+
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+        <div class="clear-box"></div>
+        <!-- clear 태그는 float의 맨 밑 문장아래에 존재해야한다. -->
+        <div class="box box-next"></div>
+        </div>
+
+
+    <!-- <div class="box"></div> -->
+
+</body>
+
+</html>
