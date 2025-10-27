@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통적인 부분과 개별적인 부분으로 나누어 짤 수 있다. */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            /* 여백의 여유 */
+            /*박스들 사이를 띄어준다*/
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
+            position: relative; /*위치의 변화시킨다.*/
+        }
+        .box:hover{
+            animation-play-state: paused;
+            /* 마우스 올린 것만 스톱한다. */
+        }
+
+        
+
+        /* 기본적인 자기 상태를 알고 있는 흐름대로 포지션을 옮길 수 있다. */
+        /* 자신의 기준점에서 움직인다. 시작에서 움직이는 상태에서 margin의 차지하는 면적으로 이상하게 움직인다. 
+그래서 애니메이션을 사용 */
+/* 여백이나 위치이동 */
+        .box1 {
+            animation-name: ani1;
+        }
+
+        .box2 {
+            animation-name: ani2;
+        }
+
+        .box3 {
+            animation-name: ani3;
+        }
+
+        @keyframes ani1 {
+            0% {
+                background-color: blue;
+                left: 0px;
+                /* 포지션이 바뀌어야 하니까 */
+            }
+
+            50% {
+                background-color: orange;
+                left: 100px
+                  /* 포지션이 바뀌어야 하니까 */
+            }
+
+            100% {
+                background-color: pink;
+                left: 200px;
+                  /* 포지션이 바뀌어야 하니까 */
+            }
+        }
+
+        @keyframes ani2 {
+            0% {
+                background-color: blue;
+                top: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+            }
+        }
+
+        @keyframes ani3 {
+            0% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                left: 100px;
+                top: 100px
+            }
+
+            100% {
+                background-color: pink;
+                left: 200px;
+                top: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+
+</html>
