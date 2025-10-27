@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 속성값 space-between 두개만 있을 때 좌우배치 */
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            /*space-between 좌우 배치
+            배치간격의 사이를 동일하게 유지하겠다.
+            양쪽벽 끝에서 동일하게 배치한다.
+            전체 부모를 설정하고 자식을 space-between하고 
+            내부를 가로로 flex 배치 할 수 있다.
+              */
+        }
+
+        .left {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+        }
+
+        .right {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- nav header top-->
+    <div class="nav">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>

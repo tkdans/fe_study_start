@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /*외부여백 0*/
+            padding: 0;
+            /*내부여백 0*/
+            box-sizing: border-box;
+            /*박스모델에 사이즈를 지정하면 border까지 사이즈 자동 설정*/
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+
+            /* 기본 주축은 가로 */
+            /* 부모,자식 구분하여 속성을 부여하는 것이 중요 */
+            /* flex-direction: column-reverse; */
+            flex-wrap: wrap;
+            /* 주축방향에 따라 정렬한다. justify-content 
+            스타일을 보고 한다.*/
+            justify-content: space-evenly;
+            /* justify-content: space-evenly; 외부에 적당한 여백을 부여한다. */
+            /*  align-items 각각의 줄릉 기준으로 정렬*/
+            /* align-items: center; */
+            /*align-content 한줄을 기준으로 정렬  */
+            height: 400px;
+            background-color: lightblue;
+        }
+
+        .content-center {
+            /* 특정 위치로 옮길 수 있다. 가운데로 만들기, flex로 부모와자식에 관계를 이용해서
+            내부에 요소를 가운데 정렬할 수 있다.*/
+            /* text-align: center; */
+            /* padding-top: 35px; */
+            /* magin:0 auto 본인이기 때문에 움직일 수 없다*/
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .container .item {
+            /* 가운데 정렬 여백*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 가로요소로 바쭈려 한다 -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item content-center">4</div>
+        <div class="item content-center">5</div>
+         <div class="item">6</div>
+        <!-- <div class="item" style="align-self: flex-end;">6</div> -->
+        <!-- align-self: flex-end; 각자 정렬  -->
+    </div>
+
+</body>
+
+</html>
