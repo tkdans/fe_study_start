@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid ;
+            grid-template-rows: repeat(5,100px) ;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-areas: 
+            "header header sidebar sideba"
+            "item item item item"
+            "sidebar sidebar header header"
+            "header header header item2"
+        }
+
+        #header{
+          
+            background-color: yellow;
+            grid-area: header;
+        }
+        #sidebar{
+         
+            background-color: lightskyblue;
+            grid-area: sidebar;
+        }
+        #content{
+            background-color: coral;
+            grid-area: content;
+        }
+        #item{
+            background-color: blue;
+            grid-area: item;
+        }
+        #item2{
+            background-color: green;
+            grid-area: item2;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+        <div id="header"></div>
+        <div id="sidebar"></div>
+        <div id="content"></div>
+        <div id="item"></div>
+        <div id="item2"></div>
+        
+    </div>
+</body>
+</html>
