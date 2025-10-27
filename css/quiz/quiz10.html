@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /*외부여백 0*/
+            padding: 0;
+            /*내부여백 0*/
+            box-sizing: border-box;
+            /*박스모델에 사이즈를 지정하면 border까지 사이즈 자동 설정*/
+
+        }
+        .box{
+                        width: 100px;
+            height: 100px;
+           background-color: blue;
+            animation-name: box-ani1;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+            /* animation-iteration-count: 3; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
+            
+position: relative; 
+        }
+        @keyframes box-ani1{
+            0%{
+                background-color: blue;
+                left: 0px;
+                transform: translate() rotate();
+            }
+            50%{
+                background-color: yellow;
+                left: 100px;
+                transform: rotate(0deg) rotate(360deg);
+            }
+            100%{
+                 background-color: pink;
+                left: 200px;
+                transform: rotate(360deg) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"> </div>
+
+</body>
+
+</html>
