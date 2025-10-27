@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            /*외부여백 0*/
+            padding: 0;
+            /*내부여백 0*/
+            box-sizing: border-box;
+            /*박스모델에 사이즈를 지정하면 border까지 사이즈 자동 설정*/
+        }
+        /* 최소한의 가로 재치 6개가 있다*/
+        .item{
+            border: 1px solid black;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 70px 80px;
+            /* 가로 2줄*/
+            grid-template-columns: 80px 90px 100px;
+            /* 세로 3줄 */
+            row-gap: 5px;
+            column-gap: 10px;
+            /* grid-colum: start/ end
+            그리드를 합치거나 지울수 있다.*/
+        }
+        .row-merge{
+            /* grid-row-start: 1; */
+            /* grid-row-end: 3; */
+            grid-row: 1/span3;
+        }
+        .col-merge {
+            /* grid-column-start: 2; */
+            /* grid-column-end: 4; */
+        grid-column: 2/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item row-merge"></div>
+        <div class="item col-merge"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
